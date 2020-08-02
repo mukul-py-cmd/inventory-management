@@ -6,9 +6,9 @@ class Box(models.Model):
 	length = models.DecimalField(max_digits=6, decimal_places=3)
 	breadth = models.DecimalField(max_digits=6, decimal_places=3)
 	height = models.DecimalField(max_digits=6, decimal_places=3)
-	area = models.DecimalField(max_digits=10, decimal_places=3,null = True)
-	volume = models.DecimalField(max_digits=13, decimal_places=3,null = True)
-	created_by = models.ForeignKey(User,on_delete=models.CASCADE,null =True)
+	area = models.DecimalField(max_digits=10, decimal_places=3,blank=True)
+	volume = models.DecimalField(max_digits=13, decimal_places=3,blank=True)
+	created_by = models.ForeignKey(User,on_delete=models.CASCADE,blank=True)
 	created_on = models.DateField(auto_now_add=True)
 	updated_on = models.DateField(auto_now=True)
 
