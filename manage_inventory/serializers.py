@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Box
+from decimal import Decimal
 
 class staff_BoxSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,4 +19,5 @@ class Box_create_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Box
         fields = ['length','breadth','height','area','volume']
+
 
